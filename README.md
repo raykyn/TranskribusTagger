@@ -53,6 +53,8 @@ optional arguments:
   - Python 3.8 or newer (probably also works with older Python 3.X versions, but not tested)
   - flair (https://github.com/flairNLP/flair)
   
+  If you do not have a device with a CUDA-compatible video card, the tagging process will be very slow, and I would recommend doing this only for a few pages at once, e.g. for testing. If you want to process a large collection of documents, consider obtaining a device with a CUDA-compatible video card, or using a cloud platform like Google Colab.
+  
   ## Notes
   - This script is still very much in development and bugs must be expected. Please report any unwanted bevior to us.
   
