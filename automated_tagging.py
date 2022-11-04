@@ -84,7 +84,7 @@ def process_page(url, tagger, debug):
     # get all text elements
     texts = root.findall(".//{http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15}TextLine/{http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15}TextEquiv/{http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15}Unicode")
     # construct a single string as input for the tagger
-    text = " ".join([t.text.replace("\n", " ") for t in texts if t.text is not None]).replace("¬ ", "").replace("- ", "")
+    text = " ".join([re.sub("(¬|-)$", "¬", t.text) for t in texts if t.text is not None]).replace("¬ ", "")
     # annotate text
     text = Sentence(text)
     tagger.predict(text)
