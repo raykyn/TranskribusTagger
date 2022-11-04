@@ -1,4 +1,4 @@
-# TranskribusTagger (Version 0.1)
+# TranskribusTagger (Version 0.1.1)
 This script obtains Transkribus PageXML via API, annotates them with a flairNLP SequenceTagger (e.g. Named Entity Recognition) and then automatically uploads the changed documents via API to Transkribus.
 
 ## Usage
@@ -58,3 +58,6 @@ optional arguments:
   ## Notes
   - This script is still very much in development and bugs must be expected. Please report any unwanted bevior to us.
   
+
+## Changelog
+- Version 0.1.1 (4.11.2022): Fixed bug which caused annotations to be shifted when a hyphen appeared mid-text.
