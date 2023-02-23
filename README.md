@@ -1,6 +1,8 @@
 # TranskribusTagger (Version 0.1.1)
 This script obtains Transkribus PageXML via API, annotates them with a flairNLP SequenceTagger (e.g. Named Entity Recognition) and then automatically uploads the changed documents via API to Transkribus.
 
+IMPORTANT NOTE: At the moment, the script is written in a way that only accepts NER-tags (PER, ORG, LOC). You may modify the script for your own usage by changing the dictionary TAG_CONVERSION to your needs (keys are the tags given by flair, values the Transkribus tags) until an updated version that fixes this issue is released.
+
 ## Usage
 ```
 usage: automated_tagging.py [-h] -u USER -m MODEL [-c COLL] [-d DOC]
